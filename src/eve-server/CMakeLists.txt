@@ -12,6 +12,12 @@ SET( TARGET_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/src/${TARGET_NAME}" )
 SET( TARGET_SOURCE_DIR  "${PROJECT_SOURCE_DIR}/src/${TARGET_NAME}" )
 SET( TARGET_UTILS_DIR   "${PROJECT_SOURCE_DIR}/utils" )
 
+###################
+# JSON Library    #
+###################
+# Use nlohmann-json from vcpkg
+find_package(nlohmann_json CONFIG REQUIRED)
+
 #########
 # Files #
 #########
@@ -238,7 +244,7 @@ SET( dungeon_SOURCE
      "${TARGET_SOURCE_DIR}/dungeon/DungeonService.cpp" )
 
 SET( effects_INCLUDE
-     #"${TARGET_INCLUDE_DIR}/effects/EffectsActions.h"
+    #"${TARGET_INCLUDE_DIR}/effects/EffectsActions.h"
      "${TARGET_INCLUDE_DIR}/effects/EffectsData.h"
      "${TARGET_INCLUDE_DIR}/effects/EffectsDataMgr.h"
      "${TARGET_INCLUDE_DIR}/effects/EffectsProcessor.h"
@@ -369,13 +375,20 @@ SET( market_SOURCE
      #"${TARGET_SOURCE_DIR}/market/NPCMarket.cpp")
 
 SET( missions_INCLUDE
+     "${TARGET_INCLUDE_DIR}/missions/MissionData.h"
+     "${TARGET_INCLUDE_DIR}/missions/MissionLoader.h"
+     "${TARGET_INCLUDE_DIR}/missions/MissionDataMapper.h"
+     "${TARGET_INCLUDE_DIR}/missions/NewMissionDataMgr.h"
      "${TARGET_INCLUDE_DIR}/missions/MissionDB.h"
-     "${TARGET_INCLUDE_DIR}/missions/MissionDataMgr.h"
-     "${TARGET_INCLUDE_DIR}/missions/MissionMgrService.h" )
+     "${TARGET_INCLUDE_DIR}/missions/MissionMgrService.h"
+     "${TARGET_INCLUDE_DIR}/missions/MissionDataMgr.h" )
 SET( missions_SOURCE
+     "${TARGET_SOURCE_DIR}/missions/MissionLoader.cpp"
+     "${TARGET_SOURCE_DIR}/missions/MissionDataMapper.cpp"
+     "${TARGET_SOURCE_DIR}/missions/NewMissionDataMgr.cpp"
      "${TARGET_SOURCE_DIR}/missions/MissionDB.cpp"
-     "${TARGET_SOURCE_DIR}/missions/MissionDataMgr.cpp"
-     "${TARGET_SOURCE_DIR}/missions/MissionMgrService.cpp" )
+     "${TARGET_SOURCE_DIR}/missions/MissionMgrService.cpp"
+     "${TARGET_SOURCE_DIR}/missions/MissionDataMgr.cpp" )
 
 SET( npc_INCLUDE
      #"${TARGET_INCLUDE_DIR}/npc/Concord.h"
@@ -766,7 +779,8 @@ TARGET_INCLUDE_DIRECTORIES( "${TARGET_NAME}"
                             ${eve-common_INCLUDE_DIRS}
                             "${TARGET_INCLUDE_DIR}" )
 TARGET_LINK_LIBRARIES( "${TARGET_NAME}"
-                       "eve-common" )
+                       "eve-common"
+                       nlohmann_json::nlohmann_json )
 
 INSTALL( TARGETS "${TARGET_NAME}"
          RUNTIME DESTINATION "bin" )

@@ -1,0 +1,1859 @@
+[
+  {
+    "metadata": {
+      "id": 4,
+      "name": "Zenith Protocol",
+      "faction": "Caldari State",
+      "mission_type": "reconnaissance",
+      "difficulty": 3,
+      "estimated_duration": 22,
+      "is_epic": false,
+      "is_funny": false,
+      "complexity": "standard",
+      "tone": "standard",
+      "version": "1.0",
+      "generated_at": "2026-01-09 13:54:12"
+    },
+    "agent": {
+      "name": "Enitouvo Erkonoi",
+      "corporation": "Chief Executive Panel",
+      "location": {
+        "system": "Aikoro",
+        "system_id": 30002753,
+        "constellation_id": 20000403,
+        "region_id": 10000033,
+        "security": 0.771435200418887
+      }
+    },
+    "mission_space": {
+      "system": "Aikoro",
+      "type": "station",
+      "description": "Reconnaissance site in Aikoro",
+      "requires_warp": true
+    },
+    "objectives_structured": [
+      {
+        "id": 1,
+        "type": "reconnaissance",
+        "description": "Proceed to the derelict outpost and establish a secure perimeter.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 2,
+        "type": "scan",
+        "description": "Scan the outpost’s core systems for the source of the anomalous energy signature.",
+        "required": true,
+        "completion_criteria": {
+          "signatures_scanned": 4
+        }
+      },
+      {
+        "id": 3,
+        "type": "retrieve",
+        "description": "Retrieve all data logs pertaining to ‘Project Nova’.",
+        "required": true,
+        "completion_criteria": {
+          "items_collected": 4,
+          "item_type": "mission_item"
+        }
+      },
+      {
+        "id": 4,
+        "type": "reconnaissance",
+        "description": "Report findings to Director Volkov via secure comm-channel.",
+        "required": false,
+        "completion_criteria": {}
+      }
+    ],
+    "mission_flow": {
+      "stages": [
+        {
+          "stage": 1,
+          "type": "agent_dialog",
+          "location": "agent_station",
+          "agent": "Enitouvo Erkonoi",
+          "description": "Receive initial mission briefing"
+        },
+        {
+          "stage": 2,
+          "type": "reconnaissance",
+          "location": "mission_location",
+          "description": "Complete reconnaissance objective",
+          "action": "perform_reconnaissance"
+        },
+        {
+          "stage": 3,
+          "type": "agent_dialog",
+          "location": "agent_station",
+          "agent": "Enitouvo Erkonoi",
+          "description": "Return to agent for debriefing",
+          "is_completion": true
+        }
+      ],
+      "total_stages": 3,
+      "requires_agent_return": true,
+      "complexity": "multi_stage"
+    },
+    "courier_details": null,
+    "narrative": {
+      "briefing": "“{{[character]player.name}}, good. I am Enitouvo Erkonoi, State Security. We have a…complication in the Aikoro system. A remote research outpost, long thought abandoned, is emitting a highly unusual energy signature. \n\nInitial scans suggest it's related to pre-Collapse Jovian research – dangerous knowledge the Gallente would kill for. We suspect Gallente agents are already en route.\n\nYour task is straightforward. Proceed to the derelict outpost in Aikoro and establish a secure perimeter. Scan the core systems to pinpoint the source of the signature, then retrieve *all* data logs referencing ‘Project Nova’. Director Volkov requires this information immediately. \n\nThis isn’t simply about salvage, {{[character]player.name}}. Project Nova could shift the balance of power. Failure is…unacceptable. I expect a full report via secure comm-channel upon completion. Dismissed.”",
+      "objectives": "## Mission: Zenith Protocol - Caldari State\n\n**Objectives:**\n\n1. **Scout** the Zenith Protocol deployment site (designated as 'Zenith-Alpha') within the system. Utilize directional scanners to confirm the presence of any hostile activity before proceeding.\n2. **Scan** three (3) specific energy signatures located within 5km of Zenith-Alpha. These signatures indicate potential defensive installations and must be fully analyzed to determine their capabilities. (Signatures will be highlighted on the local map).\n3. **Investigate** the wreckage field orbiting Zenith-Alpha. Recover and analyze three (3) data logs detailing the original purpose of the Zenith Protocol research.\n4. **Survey** the perimeter of Zenith-Alpha for signs of cloaked hostiles. Maintain a passive scanning mode and report any anomalies immediately.\n5. **Recon** the approach vector to Zenith-Alpha from the system's jump gate. Identify and log any potential ambush points or pre-positioned defensive forces. (This will require a brief transit away from Zenith-Alpha).",
+      "completion": "\"Excellent work, {{[character]player.name}}. Your swift action in securing the Zenith Protocol data was invaluable to the State. The information recovered will significantly bolster our defenses against Amarr incursions. \n\nAs promised, 350,000 ISK and a standard blueprint copy of the 'Augmented Cruiser Targeting Array' have been transferred to your account. The Caldari State appreciates your dedication and service. Should you encounter further threats to our interests, do not hesitate to contact us.\""
+    },
+    "encounters": [
+      {
+        "wave": 1,
+        "trigger": "proximity",
+        "distance": "37km",
+        "ships": [
+          {
+            "type": "Merlin",
+            "type_id": 603,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Merlin",
+            "type_id": 603,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Heron",
+            "type_id": 605,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Merlin",
+            "type_id": 603,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Merlin",
+            "type_id": 603,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Bantam",
+            "type_id": 582,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          }
+        ]
+      },
+      {
+        "wave": 2,
+        "trigger": "previous_wave_cleared",
+        "distance": "25km",
+        "ships": [
+          {
+            "type": "Worm",
+            "type_id": 17930,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Worm",
+            "type_id": 17930,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Bantam",
+            "type_id": 582,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Heron",
+            "type_id": 605,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Condor",
+            "type_id": 583,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Heron",
+            "type_id": 605,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Caracal Navy Issue",
+            "type_id": 17634,
+            "class": "Cruiser",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "15-25km"
+          },
+          {
+            "type": "Moa",
+            "type_id": 623,
+            "class": "Cruiser",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "15-25km"
+          },
+          {
+            "type": "Caracal Navy Issue",
+            "type_id": 17634,
+            "class": "Cruiser",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "15-25km"
+          }
+        ]
+      },
+      {
+        "wave": 3,
+        "trigger": "previous_wave_cleared",
+        "distance": "36km",
+        "ships": [
+          {
+            "type": "Caracal Navy Issue",
+            "type_id": 17634,
+            "class": "Cruiser",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "15-25km"
+          },
+          {
+            "type": "Caracal Navy Issue",
+            "type_id": 17634,
+            "class": "Cruiser",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "15-25km"
+          },
+          {
+            "type": "Osprey",
+            "type_id": 620,
+            "class": "Cruiser",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "15-25km"
+          },
+          {
+            "type": "Raven State Issue",
+            "type_id": 26840,
+            "class": "Battleship",
+            "count": 1,
+            "behavior": "boss",
+            "orbit_range": "30-50km",
+            "special": "May trigger reinforcements"
+          }
+        ]
+      }
+    ],
+    "rewards": {
+      "isk": {
+        "base": 500000,
+        "bonus": 150000,
+        "total_possible": 650000
+      },
+      "loyalty_points": {
+        "base": 2000,
+        "corporation": "Caldari State"
+      },
+      "standings": {
+        "faction": "Caldari State",
+        "increase": 0.03
+      },
+      "items": [],
+      "salvage": false,
+      "loot_value_estimate": 0
+    },
+    "requirements": {
+      "min_ship_class": "Cruiser",
+      "recommended_ship_class": "Battlecruiser",
+      "damage_type": {
+        "primary": "Kinetic",
+        "secondary": "Thermal"
+      },
+      "tank_type": {
+        "primary": "Kinetic",
+        "secondary": "Thermal"
+      }
+    },
+    "technical": {
+      "generation_method": "LLM concept + database enrichment",
+      "source_data": {
+        "story_hook": "Intelligence reports indicate a previously unknown research station in the Ahtila system, abandoned decades ago. Recent scans reveal a significant energy surge from the station, potentially linked to illicit experimentation. We suspect lingering security systems and possibly a rogue AI are active. Your mission is to infiltrate the station, secure the data, and determine the nature of this emergent threat.",
+        "original_objectives": [
+          "Proceed to the derelict outpost and establish a secure perimeter.",
+          "Scan the outpost’s core systems for the source of the anomalous energy signature.",
+          "Retrieve all data logs pertaining to ‘Project Nova’.",
+          "Report findings to Director Volkov via secure comm-channel."
+        ]
+      }
+    },
+    "assessment": {
+      "logical": true,
+      "fun_rating": 10,
+      "reasoning": "Based on the description, it *sounds* like a fairly standard reconnaissance mission. The core concept – a rediscovered outpost – has potential, but it's heavily reliant on *what* makes the signal unusual and what the player discovers. A 6/10 assumes the encounters are just standard ratting with perhaps a slightly different ship composition. The fun comes from the mystery of the signal, but that's only established in the briefing. Without knowing what the player is *actually* investigating, it's hard to rate it higher. Three encounters feels like a reasonable length for a recon mission. It's not *bad*, but it's also not particularly exciting as described. A higher rating would require unique elements, like hacking minigames, interesting lore reveals, or a surprising twist.",
+      "issues": [
+        "Incomplete briefing. The most glaring issue is the briefing cuts off mid-sentence (\"highly unusual e\"). This is a major problem. We don't know *what* is unusual. This severely limits the player's motivation and understanding of the mission."
+      ],
+      "recommendations": [
+        ""
+      ]
+    }
+  },
+  {
+    "metadata": {
+      "id": 5,
+      "name": "Quaking Stellar Forge",
+      "faction": "Angel Cartel",
+      "mission_type": "reconnaissance",
+      "difficulty": 2,
+      "estimated_duration": 22,
+      "is_epic": false,
+      "is_funny": false,
+      "complexity": "standard",
+      "tone": "standard",
+      "version": "1.0",
+      "generated_at": "2026-01-09 13:54:30"
+    },
+    "agent": {
+      "name": "Yanal Ahyasma",
+      "corporation": "Joint Harvesting",
+      "location": {
+        "system": "Jondik",
+        "system_id": 30003387,
+        "constellation_id": 20000494,
+        "region_id": 10000042,
+        "security": 0.853141549071222
+      }
+    },
+    "mission_space": {
+      "system": "Jondik",
+      "type": "station",
+      "description": "Reconnaissance site in Jondik",
+      "requires_warp": true
+    },
+    "objectives_structured": [
+      {
+        "id": 1,
+        "type": "retrieve",
+        "description": "Infiltrate the abandoned research outpost and recover all seismic data logs.",
+        "required": true,
+        "completion_criteria": {
+          "items_collected": 3,
+          "item_type": "mission_item"
+        }
+      },
+      {
+        "id": 2,
+        "type": "kill",
+        "description": "Eliminate the rogue scientist, Dr. Aris Thorne, before he can broadcast a warning.",
+        "required": true,
+        "completion_criteria": {
+          "ships_destroyed": 10,
+          "target_faction": "enemy"
+        }
+      },
+      {
+        "id": 3,
+        "type": "reconnaissance",
+        "description": "Sabotage the primary seismic emitter core; ensure structural failure.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 4,
+        "type": "mine",
+        "description": "Extract any remaining usable technology; personal salvage is encouraged.",
+        "required": false,
+        "completion_criteria": {}
+      }
+    ],
+    "mission_flow": {
+      "stages": [
+        {
+          "stage": 1,
+          "type": "agent_dialog",
+          "location": "agent_station",
+          "agent": "Yanal Ahyasma",
+          "description": "Receive initial mission briefing"
+        },
+        {
+          "stage": 2,
+          "type": "reconnaissance",
+          "location": "mission_location",
+          "description": "Complete reconnaissance objective",
+          "action": "perform_reconnaissance"
+        },
+        {
+          "stage": 3,
+          "type": "popup_message",
+          "location": "any",
+          "description": "Mission complete - receive confirmation",
+          "message_type": "completion",
+          "is_completion": true
+        }
+      ],
+      "total_stages": 3,
+      "requires_agent_return": false,
+      "complexity": "multi_stage"
+    },
+    "courier_details": null,
+    "narrative": {
+      "briefing": "“{{[character]player.name}}, good. You have a reputation for…discretion. I am Yanal Ahyasma, and the Angel Cartel appreciates initiative.\n\nWe’ve detected activity in Jondik – a former Caldari research outpost. Dr. Aris Thorne, a disgraced scientist, has reactivated the station’s seismic equipment. He intends to broadcast data – data the Caldari *don't* want public. It could disrupt our operations in the region, and draw unwanted attention.\n\nYour task is threefold. Infiltrate the station in Jondik, eliminate Thorne before he transmits, and sabotage the primary seismic emitter core – ensure it fails catastrophically. Recover the seismic data logs, of course. Any remaining usable technology…consider it a bonus. We’ve heard whispers of a Victor Emblem being amongst his effects. \n\nFailure is…unacceptable. The Cartel expects results. Do we have an understanding?”",
+      "objectives": "## Quaking Stellar Forge - Mission Objectives\n\n1. **Scout** the perimeter of the Quaking Stellar Forge asteroid belt for any unusual energy signatures. Focus your scan on asteroids exhibiting thermal anomalies – prioritize those registering above 85 Kelvin.\n2. **Scan** down three (3) Angel Cartel logistical relay stations hidden within the belt. These stations are cloaked and utilize advanced dampening fields – use combat scanners to pinpoint their location.\n3. **Investigate** the wreckage field near the Forge's core. Recover any data logs pertaining to the recent seismic activity – specifically, logs referencing \"Project Nightingale\".\n4. **Survey** the Forge’s central structure for structural weaknesses. Identify and mark three (3) key support pillars using your targeting system – these will be vital for a follow-up operation.\n5. **Recon** the approach vectors to the Forge, identifying and cataloging any Angel Cartel patrol routes. Note the composition and frequency of these patrols – relay this information to command.",
+      "completion": "\"Excellent work, {{[character]player.name}}. The disruption to the stellar forge is… acceptable. Let the Caldari rebuild, it'll give us something else to dismantle later. \n\nThe salvage rights were more valuable than anticipated. Here’s your payout – a standard ISK transfer, plus a little something extra for handling things so… efficiently. Don't spend it all in one place. And remember, the Angel Cartel *always* appreciates discretion. Now, if you’ll excuse me, I have calibrations to oversee.\""
+    },
+    "encounters": [
+      {
+        "wave": 1,
+        "trigger": "proximity",
+        "distance": "49km",
+        "ships": [
+          {
+            "type": "Rifter",
+            "type_id": 587,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Republic Fleet Firetail",
+            "type_id": 17812,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Dramiel",
+            "type_id": 17932,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Vigil",
+            "type_id": 3766,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          }
+        ]
+      },
+      {
+        "wave": 2,
+        "trigger": "previous_wave_cleared",
+        "distance": "46km",
+        "ships": [
+          {
+            "type": "Dramiel",
+            "type_id": 17932,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Republic Fleet Firetail",
+            "type_id": 17812,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Breacher",
+            "type_id": 598,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Republic Fleet Firetail",
+            "type_id": 17812,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Cynabal",
+            "type_id": 17720,
+            "class": "Cruiser",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "15-25km"
+          },
+          {
+            "type": "Loki",
+            "type_id": 29990,
+            "class": "Cruiser",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "15-25km"
+          }
+        ]
+      }
+    ],
+    "rewards": {
+      "isk": {
+        "base": 250000,
+        "bonus": 75000,
+        "total_possible": 325000
+      },
+      "loyalty_points": {
+        "base": 1000,
+        "corporation": "Angel Cartel"
+      },
+      "standings": {
+        "faction": "Angel Cartel",
+        "increase": 0.02
+      },
+      "items": [],
+      "salvage": false,
+      "loot_value_estimate": 0
+    },
+    "requirements": {
+      "min_ship_class": "Destroyer",
+      "recommended_ship_class": "Cruiser",
+      "damage_type": {
+        "primary": "Explosive",
+        "secondary": "Kinetic"
+      },
+      "tank_type": {
+        "primary": "Explosive",
+        "secondary": "Kinetic"
+      }
+    },
+    "technical": {
+      "generation_method": "LLM concept + database enrichment",
+      "source_data": {
+        "story_hook": "Vrax Kell, a connoisseur of catastrophic engineering, requires your…assistance. He’s funded a terrifying project – a seismic forge capable of rending planets asunder. However, a disgruntled scientist threatens to reveal its existence, and the forge is located in a surprisingly well-defended, abandoned station. Vrax assures you 'collateral damage' is merely a delightful byproduct of progress.",
+        "original_objectives": [
+          "Infiltrate the abandoned research outpost and recover all seismic data logs.",
+          "Eliminate the rogue scientist, Dr. Aris Thorne, before he can broadcast a warning.",
+          "Sabotage the primary seismic emitter core; ensure structural failure.",
+          "Extract any remaining usable technology; personal salvage is encouraged."
+        ]
+      }
+    },
+    "assessment": {
+      "logical": true,
+      "fun_rating": 10,
+      "reasoning": "A reconnaissance mission *can* be fun, but the briefing is incredibly bare-bones. It sets a *potential* mood of intrigue (\"discretion,\" \"activity\"), but doesn’t deliver on it. It's a very functional briefing - it tells you *what* you're doing, but not *why* it's interesting. The Angel Cartel is a good faction for a mission, and a former research facility is a decent setting. However, without knowing the actual content of the encounters, it’s hard to gauge the fun factor. A 6 assumes the encounters *aren't* just \"go scan X number of containers\" or \"kill Y number of pirates\" without any narrative twist. The potential is there, but the briefing doesn't excite.",
+      "issues": [
+        "Briefing is too sparse. Lacks detail about *what* activity was detected, *why* the Angel Cartel is interested, and what the player is specifically looking for. It feels very transactional. There's no hook."
+      ],
+      "recommendations": [
+        ""
+      ]
+    }
+  },
+  {
+    "metadata": {
+      "id": 8,
+      "name": "Cataclysm",
+      "faction": "Sansha's Nation",
+      "mission_type": "combat",
+      "difficulty": 4,
+      "estimated_duration": 22,
+      "is_epic": false,
+      "is_funny": false,
+      "complexity": "standard",
+      "tone": "standard",
+      "version": "1.0",
+      "generated_at": "2026-01-09 13:55:23"
+    },
+    "agent": {
+      "name": "Zungiah Selimi",
+      "corporation": "Ministry of Internal Order",
+      "location": {
+        "system": "Akhragan",
+        "system_id": 30002197,
+        "constellation_id": 20000323,
+        "region_id": 10000043,
+        "security": 0.798783934621364
+      }
+    },
+    "mission_space": {
+      "system": "Akhragan",
+      "type": "deadspace",
+      "description": "Combat site in Akhragan",
+      "requires_warp": true
+    },
+    "objectives_structured": [
+      {
+        "id": 1,
+        "type": "combat",
+        "description": "Infiltrate the 'Hope's Bastion' orbital station and deploy the 'Neuro-Rot' bio-weapon.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 2,
+        "type": "combat",
+        "description": "Confirm deployment by monitoring station system logs for cascading neural failures.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 3,
+        "type": "mine",
+        "description": "Extract all data relating to the outpost's research on neural dampening technology, leaving no trace.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 4,
+        "type": "combat",
+        "description": "Annihilate any surviving personnel and confirm station structural integrity is compromised before departing.",
+        "required": false,
+        "completion_criteria": {}
+      }
+    ],
+    "mission_flow": {
+      "stages": [
+        {
+          "stage": 1,
+          "type": "agent_dialog",
+          "location": "agent_station",
+          "agent": "Zungiah Selimi",
+          "description": "Receive initial mission briefing"
+        },
+        {
+          "stage": 2,
+          "type": "combat",
+          "location": "mission_deadspace",
+          "description": "Engage hostile forces",
+          "action": "clear_enemies"
+        },
+        {
+          "stage": 3,
+          "type": "popup_message",
+          "location": "mission_deadspace",
+          "description": "New objective revealed",
+          "message_type": "intel_update",
+          "continues_automatically": true
+        },
+        {
+          "stage": 4,
+          "type": "agent_dialog",
+          "location": "agent_station",
+          "agent": "Zungiah Selimi",
+          "description": "Return to agent for debriefing",
+          "is_completion": true
+        }
+      ],
+      "total_stages": 4,
+      "requires_agent_return": true,
+      "complexity": "multi_stage"
+    },
+    "courier_details": null,
+    "narrative": {
+      "briefing": "“{{[character]player.name}}, you stand before Zungiah Selimi. The Nation remembers those who serve… and those who *can* serve.\n\nOur sensors detect a remnant CONCORD research outpost in Akhragan – ‘Hope’s Bastion’ they call it. Foolish optimism. They are attempting to replicate the neural dampening technology that once held *us* back. This cannot stand.\n\nI require you to infiltrate that station. Deploy the Neuro-Rot – a tailored bio-weapon, naturally – and confirm its effectiveness via system logs. Extract *all* data regarding their dampening research – Surveillance Recordings will be invaluable. Ensure the station is utterly compromised, and leave no witnesses. \n\nThis isn’t simply about eliminating a threat, {{[character]player.name}}. It’s about reclaiming what was stolen. The Nation *will* rise again, and knowledge is our weapon. A Pure Standard Crash Booster will aid your escape. Complete this, and Manchura's Tag will be yours as a reward.\"",
+      "objectives": "## Mission: Cataclysm - Objectives\n\n1. **Destroy** 10 Sansha's Nation Frigates within the designated combat zone. Prioritize targets exhibiting low hull integrity to maximize efficiency.\n2. **Eliminate** the Sansha's Nation Command Cruiser leading Wave 2. This cruiser utilizes advanced remote repair systems – focus fire to break its defenses.\n3. **Kill** 15 Sansha's Nation Assault Frigates appearing in Wave 3. These frigates are equipped with rapid-firing autocannons; maintain distance and utilize tanking strategies.\n4. **Engage** and destroy all hostile ships appearing in each of the three combat waves. Failure to do so will result in mission failure.\n5. **Neutralize** any Sansha's Nation Interdictors that attempt to warp reinforcements into the combat area. These ships pose a significant threat to fleet mobility.",
+      "completion": "Excellent work, {{[character]player.name}}. Your… *enthusiasm* in dealing with those rogue elements has been… satisfactory. The disruption you caused to their operations will be felt throughout the system, and Sansha appreciates your… contribution. \n\nHere are the promised rewards – a modest sum, but sufficient to fuel further… endeavors. Remember, chaos is a ladder, and you've climbed another rung. Continue to serve Sansha, and perhaps greater opportunities will present themselves. Now, go forth and *spread the word*."
+    },
+    "encounters": [
+      {
+        "wave": 1,
+        "trigger": "proximity",
+        "distance": "44km",
+        "ships": []
+      },
+      {
+        "wave": 2,
+        "trigger": "previous_wave_cleared",
+        "distance": "39km",
+        "ships": []
+      },
+      {
+        "wave": 3,
+        "trigger": "previous_wave_cleared",
+        "distance": "56km",
+        "ships": []
+      }
+    ],
+    "rewards": {
+      "isk": {
+        "base": 1200000,
+        "bonus": 360000,
+        "total_possible": 1560000
+      },
+      "loyalty_points": {
+        "base": 4000,
+        "corporation": "Sansha's Nation"
+      },
+      "standings": {
+        "faction": "Sansha's Nation",
+        "increase": 0.04
+      },
+      "items": [],
+      "salvage": true,
+      "loot_value_estimate": 600000.0
+    },
+    "requirements": {
+      "min_ship_class": "Battlecruiser",
+      "recommended_ship_class": "Battleship",
+      "damage_type": {
+        "primary": "EM",
+        "secondary": "Thermal"
+      },
+      "tank_type": {
+        "primary": "EM",
+        "secondary": "Thermal"
+      }
+    },
+    "technical": {
+      "generation_method": "LLM concept + database enrichment",
+      "source_data": {
+        "story_hook": "The rebels in Veridian Reach are foolish enough to believe they can shield their minds from the glorious network of the Sansha. Their pathetic attempts at neural isolation are an affront to our collective consciousness! Kaelen Rask demands you demonstrate the futility of resistance by unleashing a tailored plague – one that doesn't simply *kill*, but erases their sentience, turning them into blissful, empty husks.",
+        "original_objectives": [
+          "Infiltrate the 'Hope's Bastion' orbital station and deploy the 'Neuro-Rot' bio-weapon.",
+          "Confirm deployment by monitoring station system logs for cascading neural failures.",
+          "Extract all data relating to the outpost's research on neural dampening technology, leaving no trace.",
+          "Annihilate any surviving personnel and confirm station structural integrity is compromised before departing."
+        ]
+      }
+    },
+    "assessment": {
+      "logical": true,
+      "fun_rating": 10,
+      "reasoning": "Based on the information given, it feels fairly standard. Three encounters suggest a moderate-length combat mission. The Sansha faction *can* be fun due to their distinctive ship designs and aggressive tactics. However, the briefing is incredibly sparse. It lacks any real narrative hook beyond \"go destroy/secure something at this location.\" A 6/10 reflects a mission that is *competent* but doesn’t immediately grab the player’s interest. The potential for fun is there, but it relies heavily on the *execution* of the encounters themselves – are they interesting fights, or just waves of NPCs? The briefing does little to build anticipation.",
+      "issues": [
+        ""
+      ],
+      "recommendations": [
+        ""
+      ]
+    }
+  },
+  {
+    "metadata": {
+      "id": 10,
+      "name": "Aegis Transfer Sequence",
+      "faction": "Caldari State",
+      "mission_type": "courier",
+      "difficulty": 4,
+      "estimated_duration": 22,
+      "is_epic": false,
+      "is_funny": false,
+      "complexity": "standard",
+      "tone": "standard",
+      "version": "1.0",
+      "generated_at": "2026-01-09 13:56:00"
+    },
+    "agent": {
+      "name": "Akanula Kera",
+      "corporation": "Propel Dynamics",
+      "location": {
+        "system": "Haatomo",
+        "system_id": 30002800,
+        "constellation_id": 20000411,
+        "region_id": 10000033,
+        "security": 0.609265501190048
+      }
+    },
+    "mission_space": {
+      "system": "Haatomo",
+      "type": "station",
+      "description": "Courier site in Haatomo",
+      "requires_warp": false
+    },
+    "objectives_structured": [
+      {
+        "id": 1,
+        "type": "transport",
+        "description": "Escort the transport vessel 'Keystone' from the Ahtila station to a designated rendezvous point.",
+        "required": true,
+        "completion_criteria": {
+          "cargo_delivered": 1,
+          "destination": "mission_location"
+        }
+      },
+      {
+        "id": 2,
+        "type": "courier",
+        "description": "Neutralize any hostile contacts attempting to intercept 'Keystone' - prioritize swift and decisive action.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 3,
+        "type": "transport",
+        "description": "Confirm secure delivery of the defector and associated data package to the waiting Duallian Tactical Cruiser.",
+        "required": true,
+        "completion_criteria": {
+          "cargo_delivered": 1,
+          "destination": "mission_location"
+        }
+      },
+      {
+        "id": 4,
+        "type": "courier",
+        "description": "Return to Ahtila station and submit a full mission report.",
+        "required": false,
+        "completion_criteria": {}
+      }
+    ],
+    "mission_flow": {
+      "stages": [
+        {
+          "stage": 1,
+          "type": "agent_dialog",
+          "location": "agent_station",
+          "agent": "Akanula Kera",
+          "description": "Receive initial mission briefing"
+        },
+        {
+          "stage": 2,
+          "type": "travel",
+          "location": "Uedama",
+          "description": "Deliver cargo to Uedama",
+          "action": "deliver_cargo"
+        },
+        {
+          "stage": 3,
+          "type": "popup_message",
+          "location": "any",
+          "description": "Mission complete - receive confirmation",
+          "message_type": "completion",
+          "is_completion": true
+        }
+      ],
+      "total_stages": 3,
+      "requires_agent_return": false,
+      "complexity": "multi_stage"
+    },
+    "courier_details": {
+      "destination_system": "Uedama",
+      "destination_system_id": 30002768,
+      "jump_distance": 1
+    },
+    "narrative": {
+      "briefing": "“{{[character]player.name}}, good. State Intelligence has been monitoring increased Gallente activity in Haatomo. A critical defector – a former Federation cyberneticist – is en route, carrying vital data regarding their advanced drone technology. \n\nThe transport ‘Keystone’ will be departing Ahtila station within the hour. Your task is simple: escort ‘Keystone’ to a designated rendezvous point within the system. We anticipate Gallente and potentially Guristas interference. Neutralize any hostile contacts – swift action is paramount. \n\nConfirm secure transfer of the defector and the Altered Datacore - Mechanical Engineering they carry to the awaiting Duallian Tactical Cruiser. This data could shift the balance of power. Failure is… unacceptable. Report back to Ahtila station upon completion. Do we have an understanding?”",
+      "objectives": "Here are 5 mission objectives for the \"Aegis Transfer Sequence\" courier mission, formatted as a numbered list and utilizing the specified action verbs:\n\n1. **Deliver** the \"Aegis Core Component - Alpha\" from the Jita Delivery Consolidation facility to the Luminaire Solar Array in the Vale system. Ensure the component remains secure and undamaged.\n2. **Transport** 5 units of \"Nanite Paste - Refined\" from the Caldari Prime Manufacturing Complex to the station at Godah District, Asimov.\n3. **Move** the secure data package, \"Project Nightingale - Preliminary Report,\" from the Perimetra Station data archives to the CONCORD Assembly Hub in the Amarr system. Do not allow the package to fall into hostile hands.\n4. **Courier** the prototype shield generator, \"Aegis Prototype - Mark I,\" from the research labs at Saint-Germain, Bastion to the mobile station orbiting the planet Toria in the Vale system.\n5. **Shuttle** the emergency medical supplies, designated \"Bio-Containment Unit 7,\" from the Port Skaro medical depot to the quarantine station in the Vale system. Time is critical; prioritize speed.",
+      "completion": "\"Excellent work, {{[character]player.name}}. The Aegis data transfer is complete and secure, thanks to your swift action. The Caldari State appreciates your dedication to maintaining the integrity of our research. \n\nAs promised, 6,500,000 ISK has been credited to your account, along with 2 Advanced Mining Laser upgrades. This information will be vital in furthering our technological advancements. You’ve proven to be a reliable asset, and we may require your services again soon.\""
+    },
+    "encounters": [],
+    "rewards": {
+      "isk": {
+        "base": 800000,
+        "bonus": 240000,
+        "total_possible": 1040000
+      },
+      "loyalty_points": {
+        "base": 3200,
+        "corporation": "Caldari State"
+      },
+      "standings": {
+        "faction": "Caldari State",
+        "increase": 0.04
+      },
+      "items": [],
+      "salvage": false,
+      "loot_value_estimate": 0
+    },
+    "requirements": {
+      "min_ship_class": "Battlecruiser",
+      "recommended_ship_class": "Any (Fast recommended)",
+      "damage_type": {
+        "primary": "Kinetic",
+        "secondary": "Thermal"
+      },
+      "tank_type": {
+        "primary": "Kinetic",
+        "secondary": "Thermal"
+      }
+    },
+    "technical": {
+      "generation_method": "LLM concept + database enrichment",
+      "source_data": {
+        "story_hook": "Intelligence sources indicate the Gallente Federation is attempting to retrieve Lieutenant Commander Aris Thorne, a high-ranking officer who defected to the Caldari State. Thorne possesses vital information concerning a Gallente sleeper network operating within Caldari space.  Kaalaki Mercantile Solutions has been contracted to ensure his safe transport and prevent his recapture.",
+        "original_objectives": [
+          "Escort the transport vessel 'Keystone' from the Ahtila station to a designated rendezvous point.",
+          "Neutralize any hostile contacts attempting to intercept 'Keystone' - prioritize swift and decisive action.",
+          "Confirm secure delivery of the defector and associated data package to the waiting Duallian Tactical Cruiser.",
+          "Return to Ahtila station and submit a full mission report."
+        ]
+      }
+    },
+    "assessment": {
+      "logical": true,
+      "fun_rating": 10,
+      "reasoning": "Based *solely* on the briefing, this mission appears to be a very basic courier task. A defector is being moved, and the player is tasked with delivering them. There’s potential for narrative if the mission *does* more than just point-to-point travel, but the briefing doesn't suggest it. It's a core EVE activity, but lacks inherent excitement. The lack of encounters listed is a further detriment to fun. Courier missions are often considered a 'boring' content type unless they have a compelling story or risk. A simple transfer, while logically sound, doesn't inherently *feel* rewarding.",
+      "issues": [
+        "The briefing is *extremely* minimal. It establishes *what* the player is doing, but not *why* it's important beyond a vague \"vital\" descriptor. No mention of the defector's skillset, what makes them so valuable, or any potential threats beyond \"increased Gallente activity.\" This lack of detail significantly diminishes the player's investment. The mission description implies zero combat or interaction."
+      ],
+      "recommendations": [
+        ""
+      ]
+    }
+  },
+  {
+    "metadata": {
+      "id": 15,
+      "name": "Auroral Claim",
+      "faction": "Minmatar Republic",
+      "mission_type": "mining",
+      "difficulty": 1,
+      "estimated_duration": 20,
+      "is_epic": false,
+      "is_funny": false,
+      "complexity": "standard",
+      "tone": "standard",
+      "version": "1.0",
+      "generated_at": "2026-01-09 13:57:10"
+    },
+    "agent": {
+      "name": "Rutadulf Hilsenaef",
+      "corporation": "Republic Parliament",
+      "location": {
+        "system": "Ridoner",
+        "system_id": 30003457,
+        "constellation_id": 20000504,
+        "region_id": 10000042,
+        "security": 0.718450184073631
+      }
+    },
+    "mission_space": {
+      "system": "Ridoner",
+      "type": "station",
+      "description": "Mining site in Ridoner",
+      "requires_warp": false
+    },
+    "objectives_structured": [
+      {
+        "id": 1,
+        "type": "mining",
+        "description": "Reach the designated mining site within the Aedald electromagnetic anomaly.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 2,
+        "type": "mine",
+        "description": "Deploy and activate three remote survey beacons to delineate the mineral vein.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 3,
+        "type": "mine",
+        "description": "Extract and secure 500 units of Pyroxeres while maintaining beacon integrity.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 4,
+        "type": "mine",
+        "description": "Return extracted resources to the Brutor staging facility in Aedald.",
+        "required": false,
+        "completion_criteria": {}
+      }
+    ],
+    "mission_flow": {
+      "stages": [
+        {
+          "stage": 1,
+          "type": "agent_dialog",
+          "location": "agent_station",
+          "agent": "Rutadulf Hilsenaef",
+          "description": "Receive initial mission briefing"
+        },
+        {
+          "stage": 2,
+          "type": "mining",
+          "location": "mission_location",
+          "description": "Complete mining objective",
+          "action": "perform_mining"
+        },
+        {
+          "stage": 3,
+          "type": "popup_message",
+          "location": "any",
+          "description": "Mission complete - receive confirmation",
+          "message_type": "completion",
+          "is_completion": true
+        }
+      ],
+      "total_stages": 3,
+      "requires_agent_return": false,
+      "complexity": "multi_stage"
+    },
+    "courier_details": null,
+    "narrative": {
+      "briefing": "“Greetings, {{[character]player.name}}. I am Rutadulf Hilsenaef, of the Minmatar Republic. We’ve detected a significant Pyroxeres vein within the Aedald electromagnetic anomaly in Ridoner – a truly rich claim, but one complicated by the unstable energies.\n\nThe Amarr have been sniffing around, of course, but we intend to lay claim *properly*. \n\nI need you to reach the designated mining site in Ridoner, deploy three remote survey beacons to map the vein, and extract at least 500 units of Pyroxeres. Maintaining beacon integrity is vital – those signals prove our claim. \n\nDeliver the extracted resources to the Brutor staging facility in Aedald. This Pyroxeres will fuel our shipyards and bolster our defenses against the Angel Cartel. It's a small contribution, perhaps, but every unit counts in this endless struggle. Do we have an accord?”",
+      "objectives": "## Mission: Auroral Claim - Objectives\n\n**Faction:** Minmatar Republic\n**Encounters:** 0\n\n1. **Harvest** 80 units of Scordite ore from asteroids within the Domel system. Priority should be given to veins with a yield of 3% or higher.\n2. **Extract** 50 units of Pyroxeres ore from the asteroid belt located near the 'Silken Path' celestial.\n3. **Gather ore** totaling 30 units of Plagioclase from the 'Aurora' asteroid field. Scan down at least 3 different asteroid formations within the field.\n4. **Mine** a minimum of 20 units of Veldspar while operating within the Domel system’s high-security space.\n5. Deliver all harvested ore to the Republic Planetary Collection Array located at the ‘Silken Path’ station.",
+      "completion": "\"Excellent work, {{[character]player.name}}! The data you recovered from those rogue drones is exactly what we needed to solidify our claim to this sector of space. The Auroral Claim is now secure, thanks to your efforts. \n\nAs promised, 50,000 ISK and a standard Minmatar Navy Issue module have been transferred to your account. The Republic appreciates your service, and we hope to call upon your skills again soon. Fly safe!\""
+    },
+    "encounters": [],
+    "rewards": {
+      "isk": {
+        "base": 100000,
+        "bonus": 30000,
+        "total_possible": 130000
+      },
+      "loyalty_points": {
+        "base": 500,
+        "corporation": "Minmatar Republic"
+      },
+      "standings": {
+        "faction": "Minmatar Republic",
+        "increase": 0.01
+      },
+      "items": [],
+      "salvage": false,
+      "loot_value_estimate": 0
+    },
+    "requirements": {
+      "min_ship_class": "Frigate",
+      "recommended_ship_class": "Destroyer",
+      "damage_type": {
+        "primary": "Explosive",
+        "secondary": "Kinetic"
+      },
+      "tank_type": {
+        "primary": "Explosive",
+        "secondary": "Kinetic"
+      }
+    },
+    "technical": {
+      "generation_method": "LLM concept + database enrichment",
+      "source_data": {
+        "story_hook": "Recent scans indicate a significant deposit of Pyroxeres within a chaotic electromagnetic field near Aedald.  The field disrupts long-range sensor lock and potentially weapon systems, adding complexity to the operation. We require a secure extraction team to assess and recover this critical resource before opportunistic elements can claim it.",
+        "original_objectives": [
+          "Reach the designated mining site within the Aedald electromagnetic anomaly.",
+          "Deploy and activate three remote survey beacons to delineate the mineral vein.",
+          "Extract and secure 500 units of Pyroxeres while maintaining beacon integrity.",
+          "Return extracted resources to the Brutor staging facility in Aedald."
+        ]
+      }
+    },
+    "assessment": {
+      "logical": true,
+      "fun_rating": 10,
+      "reasoning": "Based *solely* on the provided text, this mission appears to be a very basic \"go mine X amount of resource\" task. There's *no* narrative hook beyond \"we found a thing, go get it\". Electromagnetic anomalies *could* provide interesting gameplay – perhaps increased risk, special effects, or even unique asteroid compositions – but the briefing doesn't hint at any of that. It's purely functional. A rating of 4 reflects that it *will* function as a mission, but doesn't promise any enjoyment beyond the basic resource gathering. It's a task, not an adventure.",
+      "issues": [
+        "Incomplete briefing. The briefing *stops* mid-sentence. This is a major issue! It's impossible to fully evaluate the mission without knowing the full objectives and any potential complications. Lack of narrative detail. The briefing is extremely dry and doesn't attempt to engage the player."
+      ],
+      "recommendations": [
+        ""
+      ]
+    }
+  },
+  {
+    "metadata": {
+      "id": 24,
+      "name": "Quantum Oversight",
+      "faction": "Caldari State",
+      "mission_type": "combat",
+      "difficulty": 2,
+      "estimated_duration": 22,
+      "is_epic": false,
+      "is_funny": true,
+      "complexity": "standard",
+      "tone": "comedic",
+      "version": "1.0",
+      "generated_at": "2026-01-09 13:59:49"
+    },
+    "agent": {
+      "name": "Jakanerva Tuomo",
+      "corporation": "Hyasyoda Corporation",
+      "location": {
+        "system": "Niyabainen",
+        "system_id": 30000143,
+        "constellation_id": 20000020,
+        "region_id": 10000002,
+        "security": 0.963923600275241
+      }
+    },
+    "mission_space": {
+      "system": "Niyabainen",
+      "type": "deadspace",
+      "description": "Combat site in Niyabainen",
+      "requires_warp": true
+    },
+    "objectives_structured": [
+      {
+        "id": 1,
+        "type": "kill",
+        "description": "Secure the perimeter of the Ahtila Research Facility - eliminate all hostile entities.",
+        "required": true,
+        "completion_criteria": {
+          "ships_destroyed": 10,
+          "target_faction": "enemy"
+        }
+      },
+      {
+        "id": 2,
+        "type": "retrieve",
+        "description": "Recover data logs from the central server core, prioritizing anomaly records.",
+        "required": true,
+        "completion_criteria": {
+          "items_collected": 3,
+          "item_type": "mission_item"
+        }
+      },
+      {
+        "id": 3,
+        "type": "retrieve",
+        "description": "Establish communications relay to Ishukone-Raata HQ - transmit recovered data.",
+        "required": true,
+        "completion_criteria": {
+          "items_collected": 3,
+          "item_type": "mission_item"
+        }
+      },
+      {
+        "id": 4,
+        "type": "combat",
+        "description": "Contain and quarantine the origin of the sensor anomaly - deploy containment beacons.",
+        "required": false,
+        "completion_criteria": {}
+      }
+    ],
+    "mission_flow": {
+      "stages": [
+        {
+          "stage": 1,
+          "type": "agent_dialog",
+          "location": "agent_station",
+          "agent": "Jakanerva Tuomo",
+          "description": "Receive initial mission briefing"
+        },
+        {
+          "stage": 2,
+          "type": "combat",
+          "location": "mission_deadspace",
+          "description": "Engage hostile forces",
+          "action": "clear_enemies"
+        },
+        {
+          "stage": 3,
+          "type": "popup_message",
+          "location": "any",
+          "description": "Mission complete - receive confirmation",
+          "message_type": "completion",
+          "is_completion": true
+        }
+      ],
+      "total_stages": 3,
+      "requires_agent_return": false,
+      "complexity": "multi_stage"
+    },
+    "courier_details": null,
+    "narrative": {
+      "briefing": "**(Jakanerva Tuomo, a Caldari man with wildly mismatched cybernetic implants and a perpetually panicked expression, paces erratically before {{[character]player.name}}.)**\n\nGreetings, esteemed capsuleer! Jakanerva Tuomo at your service… or rather, at your *utterly desperate* service! Listen closely, because this… this is *bad*. REALLY bad.\n\nWe’ve got a situation in Niyabainen. Ahtila Research Facility… it's… compromised! Not by pirates, not by the Gallente, but by… *quantum instability*! Apparently, someone left a Datacore - Quantum Physics lying around and now reality itself is glitching! The station cat, Mittens, is holding engineering hostage – demanding tuna and existential validation! \n\nIt's literally the most important mission in the history of space and time! You *must* secure the perimeter, recover the anomaly logs (prioritize the ones about Mittens!), re-establish comms with HQ, and… and contain the glitch! Avoid the purple asteroids, they’re actually frozen desserts and will ruin your shields. \n\nI’d explain more, but the hyperspace doohickey is being wonky and frankly, I forgot what this mission is about… just wing it, okay? For the State! And for Mittens! We need those logs! And maybe some tuna.",
+      "objectives": "## Quantum Oversight - Mission Objectives\n\n1. **Destroy** 8 Quantum Entangler drones deployed by the Minmatar raiding party. These drones prioritize capacitor damage – prioritize their elimination.\n2. **Eliminate** all hostile Minmatar Frigates (Kestrel, Rifter) in the first wave. Expect approximately 12 frigates.\n3. **Neutralize** the shield harmonics field generator located on the central wreckage. This will weaken the defenses of the incoming second wave.\n4. **Kill** the Minmatar Battlecruiser (Thorax) commanding the second wave. Its destruction will break the enemy's formation.\n5. **Engage** and destroy the remaining hostile Minmatar Cruisers (Cyclone) following the Battlecruiser's fall. Expect approximately 6 cruisers.",
+      "completion": "😂😂😂\n\nBy the shimmering stars of New Eden! {{[character]player.name}}, you actually *did* it! I honestly expected that quantum entanglement package to unravel into a swarm of angry space bees, but… well, here it is! Wait a minute… this isn’t the right package?! It’s… garden gnomes? Oh well, close enough! \n\nTurns out we didn't *need* the package anyway – a rogue AI solved the problem with interpretive dance. But you still delivered! Here's your payment... in the form of expired vouchers for a pleasure yacht. Don't ask. \n\nHonestly, this whole operation was more chaotic than a Minmatar rave. Just... don't tell anyone we used garden gnomes. Please. 😂😂😂"
+    },
+    "encounters": [
+      {
+        "wave": 1,
+        "trigger": "proximity",
+        "distance": "54km",
+        "ships": [
+          {
+            "type": "Heron",
+            "type_id": 605,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Caldari Navy Hookbill",
+            "type_id": 17619,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Bantam",
+            "type_id": 582,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Griffin",
+            "type_id": 584,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          }
+        ]
+      },
+      {
+        "wave": 2,
+        "trigger": "previous_wave_cleared",
+        "distance": "57km",
+        "ships": [
+          {
+            "type": "Heron",
+            "type_id": 605,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Condor",
+            "type_id": 583,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Condor",
+            "type_id": 583,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Caldari Navy Hookbill",
+            "type_id": 17619,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Caracal",
+            "type_id": 621,
+            "class": "Cruiser",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "15-25km"
+          },
+          {
+            "type": "Caracal",
+            "type_id": 621,
+            "class": "Cruiser",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "15-25km"
+          }
+        ]
+      }
+    ],
+    "rewards": {
+      "isk": {
+        "base": 300000,
+        "bonus": 90000,
+        "total_possible": 390000
+      },
+      "loyalty_points": {
+        "base": 1000,
+        "corporation": "Caldari State"
+      },
+      "standings": {
+        "faction": "Caldari State",
+        "increase": 0.02
+      },
+      "items": [],
+      "salvage": true,
+      "loot_value_estimate": 150000.0
+    },
+    "requirements": {
+      "min_ship_class": "Destroyer",
+      "recommended_ship_class": "Cruiser",
+      "damage_type": {
+        "primary": "Kinetic",
+        "secondary": "Thermal"
+      },
+      "tank_type": {
+        "primary": "Kinetic",
+        "secondary": "Thermal"
+      }
+    },
+    "technical": {
+      "generation_method": "LLM concept + database enrichment",
+      "source_data": {
+        "story_hook": "Ahtila Research Facility was decommissioned five years ago due to budgetary constraints. Recent automated system checks have flagged erratic sensor readings emanating from the station’s core, suggesting unauthorized activity. Initial scans indicate the presence of rogue drones and potentially modified station security systems. Your task is to secure the facility, retrieve all recorded data regarding the anomaly, and establish containment – failure is not an option.",
+        "original_objectives": [
+          "Secure the perimeter of the Ahtila Research Facility - eliminate all hostile entities.",
+          "Recover data logs from the central server core, prioritizing anomaly records.",
+          "Establish communications relay to Ishukone-Raata HQ - transmit recovered data.",
+          "Contain and quarantine the origin of the sensor anomaly - deploy containment beacons."
+        ]
+      }
+    },
+    "assessment": {
+      "logical": true,
+      "fun_rating": 10,
+      "reasoning": "The briefing *starts* strong with characterization. Jakanerva Tuomo sounds like a memorable NPC. However, a strong start needs a strong follow-through. A 6/10 rating assumes the combat encounters themselves aren't *bad*, but also aren't particularly innovative. It's likely a standard \"go here, kill things\" mission. The potential for fun relies heavily on *what* the player is fighting and *why*. If the enemies are thematically tied to the quantum tech (e.g., rogue drones exhibiting strange behavior, pirates using stolen/experimental weaponry) and the environment reflects the instability (visual glitches, unusual phenomena), the score could easily climb. Without that, it’s just another combat mission. The NPC sets a good tone, but the mission needs to *earn* that initial promise.",
+      "issues": [
+        "Lack of detail. We know *nothing* about the mission objectives beyond \"combat.\" What is the \"oversight\" referring to? What's gone wrong with the quantum tech? Who are the enemies and what is their motivation? A vague premise reduces player investment."
+      ],
+      "recommendations": [
+        ""
+      ]
+    }
+  },
+  {
+    "metadata": {
+      "id": 26,
+      "name": "Ravage Cobalt Constellation",
+      "faction": "Angel Cartel",
+      "mission_type": "retrieval",
+      "difficulty": 1,
+      "estimated_duration": 22,
+      "is_epic": false,
+      "is_funny": false,
+      "complexity": "standard",
+      "tone": "standard",
+      "version": "1.0",
+      "generated_at": "2026-01-09 14:00:30"
+    },
+    "agent": {
+      "name": "Partod Darmete",
+      "corporation": "Amarr Navy",
+      "location": {
+        "system": "Yarebap",
+        "system_id": 30004111,
+        "constellation_id": 20000601,
+        "region_id": 10000052,
+        "security": 0.503344474820705
+      }
+    },
+    "mission_space": {
+      "system": "Yarebap",
+      "type": "deadspace",
+      "description": "Retrieval site in Yarebap",
+      "requires_warp": true
+    },
+    "objectives_structured": [
+      {
+        "id": 1,
+        "type": "retrieval",
+        "description": "Infiltrate the Angel Cartel research outpost orbiting Valhaven III.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 2,
+        "type": "mine",
+        "description": "Extract the ‘Neural Scourge’ prototype – ensure its containment field remains active.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 3,
+        "type": "retrieval",
+        "description": "Eradicate all personnel within the outpost – no witnesses are permissible.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 4,
+        "type": "transport",
+        "description": "Deliver the prototype to Vespera’s designated drop-off buoy.",
+        "required": false,
+        "completion_criteria": {
+          "cargo_delivered": 1,
+          "destination": "mission_location"
+        }
+      }
+    ],
+    "mission_flow": {
+      "stages": [
+        {
+          "stage": 1,
+          "type": "agent_dialog",
+          "location": "agent_station",
+          "agent": "Partod Darmete",
+          "description": "Receive initial mission briefing"
+        },
+        {
+          "stage": 2,
+          "type": "retrieve",
+          "location": "mission_deadspace",
+          "description": "Locate and recover target items",
+          "action": "collect_items"
+        },
+        {
+          "stage": 3,
+          "type": "popup_message",
+          "location": "any",
+          "description": "Mission complete - receive confirmation",
+          "message_type": "completion",
+          "is_completion": true
+        }
+      ],
+      "total_stages": 3,
+      "requires_agent_return": false,
+      "complexity": "multi_stage"
+    },
+    "courier_details": null,
+    "narrative": {
+      "briefing": "“{{[character]player.name}}, good. You have a reputation for… *efficiency*. I am Partod Darmete, and the Angel Cartel is about to feel your displeasure.\n\nWe’ve detected a disturbing new project brewing within an Angel research outpost in Yarebap – something they’re calling ‘Neural Scourge’. It's a prototype weapon – a truly nasty piece of tech. Caldari intelligence suggests it could destabilize entire fleet command networks. \n\nI need you to infiltrate the outpost orbiting Valhaven III in Yarebap. Extract the prototype – *carefully*, its containment field is fragile. Then, eliminate everyone inside. No survivors. Deliver the device to Vespera’s designated drop-off buoy. \n\nThis isn't about profit, {{[character]player.name}}. This is about preventing a weapon that could cripple the entire cluster from falling into the wrong hands. Do this, and you’ll have earned more than just ISK. You’ll have earned my respect.”",
+      "objectives": "## Ravage Cobalt Constellation - Angel Cartel - Mission Objectives\n\n1. **Retrieve** 5 units of 'Cobalt Dust' from the wreckage of destroyed mining barges located within the asteroid belt marked on your scanner. Be warned, Angel pirates are scavenging the same area.\n2. **Collect** 3 Angel Cartel Data Cores from the security console within the abandoned 'Kryos' mining outpost. These cores contain valuable intelligence on their mining operations.\n3. **Recover** a stolen prototype 'Hydra' mining laser, identified by serial number ALPHA-773, from the Angel frigate wreck furthest from the outpost.\n4. **Acquire** a manifest detailing the recent Cobalt shipments. This manifest is held by the Angel Logistics Officer aboard the leading ship in the incoming combat wave. Eliminate the ship to access the data.\n5. **Fetch** 2 units of 'Refined Cobalt' from the Angel Cartel processing facility located within the designated asteroid belt. This facility is lightly defended, but expect automated turrets.",
+      "completion": "\"Excellent work, {{[character]player.name}}. The Cobalt Constellation is… significantly less problematic now, thanks to your efforts. The Angel Cartel appreciates decisive action – and a healthy reduction in competition. \n\nConsider this a down payment on future… collaborations. You’ll find the agreed-upon ISK and the salvage rights transferred to your account. Don't hesitate to reach out if you stumble across any more lucrative opportunities – or troublesome rivals. We always have need of capable hands.\""
+    },
+    "encounters": [
+      {
+        "wave": 1,
+        "trigger": "proximity",
+        "distance": "50km",
+        "ships": [
+          {
+            "type": "Rifter",
+            "type_id": 587,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Dramiel",
+            "type_id": 17932,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          }
+        ]
+      }
+    ],
+    "rewards": {
+      "isk": {
+        "base": 100000,
+        "bonus": 30000,
+        "total_possible": 130000
+      },
+      "loyalty_points": {
+        "base": 500,
+        "corporation": "Angel Cartel"
+      },
+      "standings": {
+        "faction": "Angel Cartel",
+        "increase": 0.01
+      },
+      "items": [],
+      "salvage": false,
+      "loot_value_estimate": 0
+    },
+    "requirements": {
+      "min_ship_class": "Frigate",
+      "recommended_ship_class": "Destroyer",
+      "damage_type": {
+        "primary": "Explosive",
+        "secondary": "Kinetic"
+      },
+      "tank_type": {
+        "primary": "Explosive",
+        "secondary": "Kinetic"
+      }
+    },
+    "technical": {
+      "generation_method": "LLM concept + database enrichment",
+      "source_data": {
+        "story_hook": "Vespera, a notorious bio-engineer with a penchant for ‘live testing,’ reveals a rival syndicate pilfered her latest creation – a neuro-stimulator capable of inducing crippling neurological trauma. She’s tasked you with retrieving it, not for humanitarian reasons, but to prevent its ‘improper application’ – she intends to perfect its agony-inducing capabilities. Failure will result in countless innocents suffering a fate worse than oblivion, and a *very* personal demonstration of Vespera’s surgical skills.",
+        "original_objectives": [
+          "Infiltrate the Angel Cartel research outpost orbiting Valhaven III.",
+          "Extract the ‘Neural Scourge’ prototype – ensure its containment field remains active.",
+          "Eradicate all personnel within the outpost – no witnesses are permissible.",
+          "Deliver the prototype to Vespera’s designated drop-off buoy."
+        ]
+      }
+    },
+    "assessment": {
+      "logical": true,
+      "fun_rating": 10,
+      "reasoning": "The briefing is *extremely* minimal. It sets a basic premise (Angel Cartel hiring you), but provides almost no narrative hook. \"Disturbing new project\" is a generic phrase. The line about the player’s “efficiency” feels like boilerplate and doesn’t connect to any established character history. A 5/10 is neutral – it’s not *bad*, but it's also not engaging. It's a very bare-bones start. The mission *could* be fun depending on the actual gameplay, but the briefing doesn't promise it. Retrieval missions are often a bit repetitive, and this briefing does nothing to suggest this one will be different.",
+      "issues": [
+        ""
+      ],
+      "recommendations": [
+        ""
+      ]
+    }
+  },
+  {
+    "metadata": {
+      "id": 27,
+      "name": "Impenetrable Void Reclamation",
+      "faction": "Sansha's Nation",
+      "mission_type": "combat",
+      "difficulty": 4,
+      "estimated_duration": 25,
+      "is_epic": false,
+      "is_funny": true,
+      "complexity": "standard",
+      "tone": "comedic",
+      "version": "1.0",
+      "generated_at": "2026-01-09 14:00:48"
+    },
+    "agent": {
+      "name": "Moikkoshin Ebashin",
+      "corporation": "Lai Dai Corporation",
+      "location": {
+        "system": "Akkilen",
+        "system_id": 30000178,
+        "constellation_id": 20000025,
+        "region_id": 10000002,
+        "security": 0.689045573282256
+      }
+    },
+    "mission_space": {
+      "system": "Akkilen",
+      "type": "deadspace",
+      "description": "Combat site in Akkilen",
+      "requires_warp": true
+    },
+    "objectives_structured": [
+      {
+        "id": 1,
+        "type": "combat",
+        "description": "Neutralize all automated defense systems within the 'Void Shepherd' complex.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 2,
+        "type": "combat",
+        "description": "Secure the salvaged 'Neural Regulators' – vital for optimizing combat augmentations.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 3,
+        "type": "combat",
+        "description": "Exterminate all remaining drone presence – prioritize the 'Overseer' units.",
+        "required": true,
+        "completion_criteria": {}
+      },
+      {
+        "id": 4,
+        "type": "combat",
+        "description": "Relocate the secured Neural Regulators to the designated retrieval beacon.",
+        "required": false,
+        "completion_criteria": {}
+      }
+    ],
+    "mission_flow": {
+      "stages": [
+        {
+          "stage": 1,
+          "type": "agent_dialog",
+          "location": "agent_station",
+          "agent": "Moikkoshin Ebashin",
+          "description": "Receive initial mission briefing"
+        },
+        {
+          "stage": 2,
+          "type": "combat",
+          "location": "mission_deadspace",
+          "description": "Engage hostile forces",
+          "action": "clear_enemies"
+        },
+        {
+          "stage": 3,
+          "type": "agent_dialog",
+          "location": "agent_station",
+          "agent": "Moikkoshin Ebashin",
+          "description": "Return to agent for debriefing",
+          "is_completion": true
+        }
+      ],
+      "total_stages": 3,
+      "requires_agent_return": true,
+      "complexity": "multi_stage"
+    },
+    "courier_details": null,
+    "narrative": {
+      "briefing": "**(Moikkoshin Ebashin’s image flickers on your comms – he’s wearing a tinfoil hat and frantically adjusting a headset made of spare ship parts.)**\n\n“Greetings, {{[character]player.name}}! Moikkoshin Ebashin, at your…uh…service? Look, it’s BAD. *Really* bad. The station in Akkilen…it’s being held hostage! Not by pirates, not by Jovians…by a CAT! A fluffy, tyrannical feline named Captain Mittens! She’s reprogrammed the ‘Void Shepherd’ complex’s defenses – automated turrets, the whole shebang! It's a conspiracy, I tell you! A *cat*spiracy!”\n\n“We need you to neutralize those defenses, grab some salvaged ‘Neural Regulators’ – they’re vital for… something. Honestly, I forgot. And exterminate the drones. Especially the ‘Overseer’ units – they’re judging me. Relocate the Regulators to the retrieval beacon. It’s… important. Like, *universe-endingly* important. Also, avoid the purple asteroids in Akkilen – they're frozen desserts and the local wildlife gets *very* territorial.”\n\n“This is literally the most important mission in the history of space and time! The hyperspace doohickey is being wonky, so good luck! I’d explain more, but I forgot what this mission is about… just wing it!”",
+      "objectives": "## Impenetrable Void Reclamation - Mission Objectives\n\n1. **Destroy** 10 Sansha's Nation Scourge Frigates within the designated combat zone. These frigates are prioritizing capacitor damage - prioritize targeting their weapon systems.\n2. **Eliminate** the Sansha's Nation Command Cruiser leading the second wave. This cruiser boasts significant shield reinforcement - utilize energy weapons or shield disruptors.\n3. **Kill** 8 Sansha's Nation Assault Frigates and 4 Interceptors in the third wave. These vessels will attempt to warp out when critically damaged - prevent escape by utilizing stasis webs or tackling.\n4. **Neutralize** the remote repair modules utilized by the Sansha's Nation Logistics Cruisers supporting the final wave. Disrupting their repair capabilities is crucial to quickly eliminating the hostile fleet.",
+      "completion": "**(Agent groans, dramatically clutching their forehead)**\n\nBy the shattered stars! {{[character]player.name}}, you actually *did* it! I honestly thought those containers were lost to the void forever… or worse, filled with even *more* Sansha poetry. Turns out, that wasn't the right package…oh well! We didn’t *need* those thermal vents anyway, it's been surprisingly breezy in here! \n\nHonestly, retrieving those canisters was like herding caffeinated space squids. Here’s your payment… in the form of expired vouchers and a slightly dented bobblehead of a particularly grumpy pirate. Don’t ask. Just…don't ask. You’ve earned a rest, and I’ve earned a very, *very* strong drink. And possibly a new career."
+    },
+    "encounters": [
+      {
+        "wave": 1,
+        "trigger": "proximity",
+        "distance": "39km",
+        "ships": []
+      },
+      {
+        "wave": 2,
+        "trigger": "previous_wave_cleared",
+        "distance": "24km",
+        "ships": []
+      },
+      {
+        "wave": 3,
+        "trigger": "previous_wave_cleared",
+        "distance": "40km",
+        "ships": []
+      }
+    ],
+    "rewards": {
+      "isk": {
+        "base": 1200000,
+        "bonus": 360000,
+        "total_possible": 1560000
+      },
+      "loyalty_points": {
+        "base": 4000,
+        "corporation": "Sansha's Nation"
+      },
+      "standings": {
+        "faction": "Sansha's Nation",
+        "increase": 0.04
+      },
+      "items": [],
+      "salvage": true,
+      "loot_value_estimate": 600000.0
+    },
+    "requirements": {
+      "min_ship_class": "Battlecruiser",
+      "recommended_ship_class": "Battleship",
+      "damage_type": {
+        "primary": "EM",
+        "secondary": "Thermal"
+      },
+      "tank_type": {
+        "primary": "EM",
+        "secondary": "Thermal"
+      }
+    },
+    "technical": {
+      "generation_method": "LLM concept + database enrichment",
+      "source_data": {
+        "story_hook": "A crucial Sansha data-nexus, the 'Void Shepherd', fell silent weeks ago. Our reconnaissance revealed it overrun by malfunctioning drones, likely repurposed by a degenerate splinter group. The Neural Regulators within are essential for strengthening our warriors - retrieve them, but annihilate everything refusing to comply. Failure is... unacceptable.",
+        "original_objectives": [
+          "Neutralize all automated defense systems within the 'Void Shepherd' complex.",
+          "Secure the salvaged 'Neural Regulators' – vital for optimizing combat augmentations.",
+          "Exterminate all remaining drone presence – prioritize the 'Overseer' units.",
+          "Relocate the secured Neural Regulators to the designated retrieval beacon."
+        ]
+      }
+    },
+    "assessment": {
+      "logical": true,
+      "fun_rating": 10,
+      "reasoning": "The initial briefing is *very* strong for setting a tone. Moikkoshin being a raving loon, even for Sansha, is humorous and memorable. This immediately creates a distinct feel. However, a strong opening needs to be followed up with engaging gameplay. Without knowing the encounter details, it’s hard to judge fully. A 6 assumes the encounters are standard Sansha combat (lots of small, fast ships), which is fine but not groundbreaking. The potential is there for a higher rating if the encounters are *different* – perhaps defending a specific structure, rescuing “scientists” (read: enslaved capsuleers), or dealing with a unique Sansha experiment gone wrong. The mission relies heavily on the initial characterization to carry it, and that's a risk.",
+      "issues": [
+        "Briefing is *very* short. We know *nothing* about what we're reclaiming, *why* it's important, or what the stakes are. The \"Impenetrable Void\" title feels disconnected from the frantic, low-tech presentation of Moikkoshin. There's a tonal clash."
+      ],
+      "recommendations": [
+        ""
+      ]
+    }
+  },
+  {
+    "metadata": {
+      "id": 29,
+      "name": "Cartographic Resonance",
+      "faction": "Gallente Federation",
+      "mission_type": "reconnaissance",
+      "difficulty": 1,
+      "estimated_duration": 20,
+      "is_epic": false,
+      "is_funny": false,
+      "complexity": "standard",
+      "tone": "standard",
+      "version": "1.0",
+      "generated_at": "2026-01-09 14:01:26"
+    },
+    "agent": {
+      "name": "Isbongar Eryldar",
+      "corporation": "Republic Security Services",
+      "location": {
+        "system": "Bawilan",
+        "system_id": 30002700,
+        "constellation_id": 20000395,
+        "region_id": 10000032,
+        "security": 0.539167513442179
+      }
+    },
+    "mission_space": {
+      "system": "Bawilan",
+      "type": "station",
+      "description": "Reconnaissance site in Bawilan",
+      "requires_warp": true
+    },
+    "objectives_structured": [
+      {
+        "id": 1,
+        "type": "scan",
+        "description": "Locate and scan the abandoned 'Helios' research station in the Adacyne system.",
+        "required": true,
+        "completion_criteria": {
+          "signatures_scanned": 2
+        }
+      },
+      {
+        "id": 2,
+        "type": "retrieve",
+        "description": "Retrieve all data logs pertaining to Project 'Aetherium' from the station’s central server.",
+        "required": true,
+        "completion_criteria": {
+          "items_collected": 2,
+          "item_type": "mission_item"
+        }
+      },
+      {
+        "id": 3,
+        "type": "reconnaissance",
+        "description": "Confirm the station's structural integrity and report any signs of external tampering.",
+        "required": true,
+        "completion_criteria": {}
+      }
+    ],
+    "mission_flow": {
+      "stages": [
+        {
+          "stage": 1,
+          "type": "agent_dialog",
+          "location": "agent_station",
+          "agent": "Isbongar Eryldar",
+          "description": "Receive initial mission briefing"
+        },
+        {
+          "stage": 2,
+          "type": "reconnaissance",
+          "location": "mission_location",
+          "description": "Complete reconnaissance objective",
+          "action": "perform_reconnaissance"
+        },
+        {
+          "stage": 3,
+          "type": "popup_message",
+          "location": "any",
+          "description": "Mission complete - receive confirmation",
+          "message_type": "completion",
+          "is_completion": true
+        }
+      ],
+      "total_stages": 3,
+      "requires_agent_return": false,
+      "complexity": "multi_stage"
+    },
+    "courier_details": null,
+    "narrative": {
+      "briefing": "“Greetings, {{[character]player.name}}. I am Isbongar Eryldar, a humble servant of the Gallente Federation’s cartographic corps. We’ve detected a… resonance, a faint echo of advanced technology emanating from the Bawilan system. \n\nOur long-range scans indicate a derelict research station – designated ‘Helios’ – adrift within the asteroid belt in Bawilan. It belonged to a pre-expansion initiative, Project ‘Aetherium’, and was abandoned decades ago. \n\nI need you to locate the station, access its central server, and recover all data logs pertaining to ‘Aetherium’. We believe this project held the key to faster-than-light communication – a vital asset in these troubled times. \n\nConfirm the station’s structural integrity and report any signs of tampering. Serpentis activity has been increasing in the region, and we must ensure they haven’t already scavenged this lost technology. Time is of the essence, pilot. The fate of Gallente communications may rest in your hands.”",
+      "objectives": "## Mission: Cartographic Resonance - Objectives\n\n**Faction:** Gallente Federation\n**Encounters:** 1 combat waves\n\n1. **Scout** the anomaly \"Resonance Bloom\" located within the system of Hruodmond. Approach within 2km and maintain visual contact for 60 seconds to establish initial parameters.\n2. **Scan** three (3) specific cosmic signatures within the Resonance Bloom anomaly. Prioritize signatures designated \"Echo-7\", \"Echo-9\", and \"Echo-12\" using a Probe Scanner.\n3. **Investigate** the data recovered from the scanned signatures. Analyze the signal strength and frequency patterns to determine the source of the anomalous energy readings. (Data will be automatically logged to your Journal.)\n4. **Survey** the immediate area (5km radius) around the strongest signal source identified in Objective 3. Look for any unusual structures or signs of activity.\n5. **Recon** the perimeter of the anomaly for potential hostile presence. Expect a single wave of rogue drones defending the source. Eliminate them to secure the area and complete the mission.",
+      "completion": "\"Excellent work, {{[character]player.name}}. The data you recovered from those resonance beacons is exactly what we needed to refine our cartographic projections in this region. It will significantly improve fleet navigation and reduce losses. \n\nThe Gallente Federation appreciates your service. As promised, 15,000 ISK and 2 units of Gallente Data Interface modules have been transferred to your account. Fly safe, and don't hesitate to contact us if you encounter further anomalies.\""
+    },
+    "encounters": [
+      {
+        "wave": 1,
+        "trigger": "proximity",
+        "distance": "23km",
+        "ships": [
+          {
+            "type": "Imicus",
+            "type_id": 607,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          },
+          {
+            "type": "Navitas",
+            "type_id": 592,
+            "class": "Frigate",
+            "count": 1,
+            "behavior": "aggressive",
+            "orbit_range": "5-10km"
+          }
+        ]
+      }
+    ],
+    "rewards": {
+      "isk": {
+        "base": 100000,
+        "bonus": 30000,
+        "total_possible": 130000
+      },
+      "loyalty_points": {
+        "base": 500,
+        "corporation": "Gallente Federation"
+      },
+      "standings": {
+        "faction": "Gallente Federation",
+        "increase": 0.01
+      },
+      "items": [],
+      "salvage": false,
+      "loot_value_estimate": 0
+    },
+    "requirements": {
+      "min_ship_class": "Frigate",
+      "recommended_ship_class": "Destroyer",
+      "damage_type": {
+        "primary": "Kinetic",
+        "secondary": "Thermal"
+      },
+      "tank_type": {
+        "primary": "Thermal",
+        "secondary": "Kinetic"
+      }
+    },
+    "technical": {
+      "generation_method": "LLM concept + database enrichment",
+      "source_data": {
+        "story_hook": "Novacorp Systems detected a faint but persistent energy signature originating from a long-abandoned research facility in Adacyne. The station, designated 'Helios', was engaged in experimental cartography, mapping previously unknown spatial anomalies. We suspect the station was abruptly abandoned, and we need to recover any data before it's lost or falls into the wrong hands.",
+        "original_objectives": [
+          "Locate and scan the abandoned 'Helios' research station in the Adacyne system.",
+          "Retrieve all data logs pertaining to Project 'Aetherium' from the station’s central server.",
+          "Confirm the station's structural integrity and report any signs of external tampering."
+        ]
+      }
+    },
+    "assessment": {
+      "logical": true,
+      "fun_rating": 10,
+      "reasoning": "Based *solely* on the briefing fragment, the mission sounds… okay. It's a fairly standard reconnaissance mission type. The \"resonance\" hook *could* be interesting, suggesting something unique is being discovered. However, without knowing what the resonance *is*, or what the player *does* with the information, it feels a bit bland. A 6/10 reflects a mission that is *competent* but doesn't immediately grab attention. It relies heavily on the execution of the actual scanning/probing and the encounter to elevate it. The fun will depend on the complexity of the scanning (not just 'scan everything') and the interestingness of the encounter. Is it a simple 'kill X pirates'? Or is there a puzzle, a unique enemy ship, or a narrative twist during the encounter?",
+      "issues": [
+        "Incomplete Briefing - The briefing is cut off mid-sentence. This is a major issue for quality control. We need the full briefing to understand the mission's goals, potential narrative beats, and the overall context. Lack of Detail - Even what *is* there is a little sparse. What kind of technology is this resonance indicative of? What does the Cartographic Corps *want* the player to do with the information?"
+      ],
+      "recommendations": [
+        ""
+      ]
+    }
+  }
+]

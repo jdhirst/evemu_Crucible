@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-01-09T14:02:02.280967",
+  "total_missions": 23,
+  "premium_missions": 9,
+  "high_quality_missions": 14,
+  "quality_standard": "Minimum 7/10 rating, logical consistency required",
+  "generation_method": "LLM-generated using source data as inspiration",
+  "database_integration": "Specific solar systems and ships from EVE database",
+  "tiers": {
+    "premium": {
+      "count": 9,
+      "rating": "9-10",
+      "description": "Exceptional missions"
+    },
+    "high_quality": {
+      "count": 14,
+      "rating": "7-8",
+      "description": "Solid, production-ready missions"
+    }
+  }
+}
