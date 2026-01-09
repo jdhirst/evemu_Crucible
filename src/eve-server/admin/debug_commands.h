@@ -50,6 +50,8 @@
           " - sets fleet invite scope to <arg> or none")
  COMMAND( getposition, Acct::Role::PLAYER,
           " - gets positional data between ship and moon (for pos placement testing)")
+ COMMAND( serverpos, Acct::Role::PLAYER,
+          " - returns server-side position (x, y, z) of player's ship")
  COMMAND( bubbletrack, Acct::Role::PROGRAMMER,
           " - enable/disable bubble outline tracking." )
  COMMAND( players, Acct::Role::PLAYER,

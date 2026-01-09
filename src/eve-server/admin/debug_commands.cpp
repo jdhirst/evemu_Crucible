@@ -963,6 +963,26 @@ PyResult Command_getposition(Client* pClient, CommandDB* db, EVEServiceManager &
     return new PyString(reply);
 }
 
+PyResult Command_serverpos(Client* pClient, CommandDB* db, EVEServiceManager &services, const Seperator& args)
+{
+    if (!pClient->IsInSpace())
+        throw CustomError ("You're not in space.");
+    if (!pClient->GetShipSE())
+        throw CustomError ("You have no ship entity.");
+    if (!pClient->GetShipSE()->DestinyMgr())
+        throw CustomError ("You have no destiny manager.");
+
+    GPoint pos(pClient->GetShipSE()->GetPosition());
+
+    // Return a tuple with (x, y, z) coordinates
+    PyTuple* result = new PyTuple(3);
+    result->SetItem(0, new PyFloat(pos.x));
+    result->SetItem(1, new PyFloat(pos.y));
+    result->SetItem(2, new PyFloat(pos.z));
+
+    return result;
+}
+
 PyResult Command_players(Client* pClient, CommandDB* db, EVEServiceManager &services, const Seperator& args)
 {
     std::vector<Client*> cVec;
